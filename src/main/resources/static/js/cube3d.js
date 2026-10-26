@@ -43,8 +43,8 @@ class Cube3D {
   init() {
     if (!this.container) return;
 
-    const width = this.container.clientWidth || 400;
-    const height = this.container.clientHeight || 400;
+    const width = this.container.clientWidth || (this.container.parentElement ? this.container.parentElement.clientWidth : 0) || 400;
+    const height = this.container.clientHeight || 340;
 
     // 1. Scene
     this.scene = new THREE.Scene();
@@ -156,12 +156,14 @@ class Cube3D {
   }
 
   onResize() {
-    if (!this.container || !this.renderer) return;
-    const width = this.container.clientWidth;
-    const height = this.container.clientHeight;
-    this.camera.aspect = width / height;
-    this.camera.updateProjectionMatrix();
-    this.renderer.setSize(width, height);
+    if (!this.container || !this.renderer || !this.camera) return;
+    const width = this.container.clientWidth || (this.container.parentElement ? this.container.parentElement.clientWidth : 0) || 400;
+    const height = this.container.clientHeight || 340;
+    if (width > 0 && height > 0) {
+      this.camera.aspect = width / height;
+      this.camera.updateProjectionMatrix();
+      this.renderer.setSize(width, height);
+    }
   }
 
   onClick(e) {

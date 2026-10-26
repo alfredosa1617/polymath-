@@ -1555,6 +1555,10 @@
               <span class="text-[10px] font-bold uppercase tracking-wider text-[#7C7067]">Time Remaining</span>
               <span id="modal-exam-timer" class="font-mono font-bold text-sm text-[#2C221E]">25:00</span>
             </div>
+            <!-- Header Submit Button (Always Visible) -->
+            <button type="button" id="modal-header-submit-btn" onclick="window.SAMPLE_PAPERS_MODULE.submitPracticePaper()" class="px-3.5 py-1.5 rounded-lg bg-[#2C221E] text-white hover:bg-[#4E4038] font-bold text-xs transition-colors cursor-pointer shadow-sm flex items-center gap-1.5">
+              <span>Submit Paper</span>
+            </button>
             <!-- Close Modal -->
             <button type="button" onclick="window.SAMPLE_PAPERS_MODULE.closePracticePaper()" class="p-1.5 rounded-lg hover:bg-[#F0EBE3] text-[#7C7067] hover:text-[#1C1613] transition-colors cursor-pointer" title="Exit practice paper">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1602,6 +1606,17 @@
 
           <!-- Official Rationale & Explanation (Shown upon submission) -->
           <div id="modal-q-rationale" class="hidden p-4 rounded-xl bg-[#F7F4EF] border border-[#D8CFBF] text-xs"></div>
+
+          <!-- End of Exam Submit Prompt (Shown on final question before submission) -->
+          <div id="modal-q-end-submit" class="hidden p-4 rounded-xl bg-[#F7F4EF] border border-[#EAE3D9] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-sm">
+            <div>
+              <div class="text-xs font-bold text-[#1C1613]">Final Examination Question Reached</div>
+              <div class="text-[11px] text-[#7C7067]">Verify all candidate answers or submit now for automated scoring and official rationale.</div>
+            </div>
+            <button type="button" onclick="window.SAMPLE_PAPERS_MODULE.submitPracticePaper()" class="px-5 py-2 rounded-lg bg-[#2C221E] text-white hover:bg-[#4E4038] font-bold text-xs transition-colors cursor-pointer shadow-sm shrink-0">
+              Submit Exam &amp; View Detailed Results
+            </button>
+          </div>
         </div>
 
         <!-- Modal Action Footer -->
@@ -1612,7 +1627,7 @@
           </button>
 
           <div class="flex items-center gap-2">
-            <button type="button" id="modal-submit-btn" onclick="window.SAMPLE_PAPERS_MODULE.submitPracticePaper()" class="px-4 py-1.5 rounded-lg bg-[#2C221E] text-white hover:bg-[#4E4038] font-bold transition-colors cursor-pointer shadow-sm">
+            <button type="button" id="modal-submit-btn" onclick="window.SAMPLE_PAPERS_MODULE.submitPracticePaper()" class="px-5 py-2 rounded-lg bg-[#2C221E] text-white hover:bg-[#4E4038] font-bold transition-colors cursor-pointer shadow-sm">
               Submit Practice Test
             </button>
           </div>
@@ -4625,17 +4640,17 @@
   </div>
 
   <!-- Main App Scripts -->
-  <script src="/js/api.js?v=2.1"></script>
-  <script src="/js/dsa-data.js?v=2.1"></script>
-  <script src="/js/chess.js?v=2.1"></script>
-  <script src="/js/cube3d.js?v=2.1"></script>
-  <script src="/js/guitar.js?v=2.1"></script>
-  <script src="/js/wisdom.js?v=2.1"></script>
-  <script src="/js/crypto.js?v=2.1"></script>
-  <script src="/js/finance.js?v=2.1"></script>
-  <script src="/js/sign-language.js?v=2.1"></script>
-  <script src="/js/sample-papers.js?v=2.1"></script>
-  <script src="/js/geopolitics.js?v=2.1"></script>
-  <script src="/js/app.js?v=2.1"></script>
+  <script src="/js/api.js?v=2.2"></script>
+  <script src="/js/dsa-data.js?v=2.2"></script>
+  <script src="/js/chess.js?v=2.2"></script>
+  <script src="/js/cube3d.js?v=2.2"></script>
+  <script src="/js/guitar.js?v=2.2"></script>
+  <script src="/js/wisdom.js?v=2.2"></script>
+  <script src="/js/crypto.js?v=2.2"></script>
+  <script src="/js/finance.js?v=2.2"></script>
+  <script src="/js/sign-language.js?v=2.2"></script>
+  <script src="/js/sample-papers.js?v=2.2"></script>
+  <script src="/js/geopolitics.js?v=2.2"></script>
+  <script src="/js/app.js?v=2.2"></script>
 </body>
 </html>

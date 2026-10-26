@@ -575,6 +575,23 @@ window.SAMPLE_PAPERS_MODULE = (function() {
     const modal = document.getElementById('sample-paper-modal');
     if (!modal) return;
 
+    // Reset visibility of submit buttons and score banner
+    const scoreBanner = document.getElementById('modal-score-banner');
+    if (scoreBanner) {
+      scoreBanner.classList.add('hidden');
+      scoreBanner.innerHTML = '';
+    }
+    const submitBtn = document.getElementById('modal-submit-btn');
+    if (submitBtn) {
+      submitBtn.classList.remove('hidden');
+      submitBtn.disabled = false;
+    }
+    const headerSubmitBtn = document.getElementById('modal-header-submit-btn');
+    if (headerSubmitBtn) {
+      headerSubmitBtn.classList.remove('hidden');
+      headerSubmitBtn.disabled = false;
+    }
+
     // Header updates
     document.getElementById('modal-exam-title').textContent = `${exam.name}: Official Sample Paper`;
     document.getElementById('modal-exam-meta').textContent = `${exam.country} • ${exam.authority} • ${exam.level}`;
@@ -681,6 +698,16 @@ window.SAMPLE_PAPERS_MODULE = (function() {
         rationaleEl.classList.add('hidden');
       }
     }
+
+    // Submit Prompt on Final Question
+    const endSubmitContainer = document.getElementById('modal-q-end-submit');
+    if (endSubmitContainer) {
+      if (!state.isExamSubmitted && state.currentQuestionIndex === questions.length - 1) {
+        endSubmitContainer.classList.remove('hidden');
+      } else {
+        endSubmitContainer.classList.add('hidden');
+      }
+    }
   }
 
   function selectAnswer(optIdx) {
@@ -742,6 +769,12 @@ window.SAMPLE_PAPERS_MODULE = (function() {
 
     const submitBtn = document.getElementById('modal-submit-btn');
     if (submitBtn) submitBtn.classList.add('hidden');
+
+    const headerSubmitBtn = document.getElementById('modal-header-submit-btn');
+    if (headerSubmitBtn) headerSubmitBtn.classList.add('hidden');
+
+    const endSubmitContainer = document.getElementById('modal-q-end-submit');
+    if (endSubmitContainer) endSubmitContainer.classList.add('hidden');
 
     renderQuestionView();
   }
