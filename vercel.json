@@ -2,22 +2,10 @@
   "version": 2,
   "cleanUrls": true,
   "outputDirectory": "src/main/resources/static",
-  "routes": [
+  "rewrites": [
     {
-      "src": "/assets/(.*)",
-      "dest": "/src/main/resources/static/assets/$1"
-    },
-    {
-      "src": "/css/(.*)",
-      "dest": "/src/main/resources/static/css/$1"
-    },
-    {
-      "src": "/js/(.*)",
-      "dest": "/src/main/resources/static/js/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/src/main/resources/static/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
