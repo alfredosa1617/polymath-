@@ -190,6 +190,8 @@ function switchView(viewName) {
   }
 }
 
+window.switchView = switchView;
+
 function showAuthNotice(message) {
   const alert = document.getElementById('auth-error-alert');
   if (alert) {
@@ -198,6 +200,8 @@ function showAuthNotice(message) {
     alert.classList.remove('hidden');
   }
 }
+
+window.showAuthNotice = showAuthNotice;
 
 function initNavigation() {
   document.querySelectorAll('[data-view-target]').forEach(btn => {
@@ -301,6 +305,8 @@ function setAuthMode(mode) {
   }
 }
 
+window.setAuthMode = setAuthMode;
+
 function initAuthView() {
   const tabSignup = document.getElementById('tab-auth-signup');
   const tabSignin = document.getElementById('tab-auth-signin');
@@ -372,7 +378,7 @@ function initAuthView() {
         token: "demo_jwt_token_" + Date.now(),
         email: `polymath.${provider.toLowerCase()}@vsn.com`,
         username: `${provider}User`,
-        skillMasteryRate: 126.6
+        skillMasteryRate: null
       };
       API.setToken(mockUser.token);
       API.setCurrentUser(mockUser);
@@ -387,7 +393,7 @@ function quickDemoLogin() {
     token: "demo_jwt_token_demo",
     email: "polymath@vsn.com",
     username: "PolymathUser",
-    skillMasteryRate: 126.6
+    skillMasteryRate: null
   };
   API.setToken(mockUser.token);
   API.setCurrentUser(mockUser);
@@ -441,6 +447,9 @@ function updateUserUI(user) {
     };
   }
 }
+
+window.updateUserUI = updateUserUI;
+window.checkAuthStatus = checkAuthStatus;
 
 // ==========================================
 // 3. 3x3 Rubik's Cube Solver Studio
@@ -814,7 +823,6 @@ function renderSolutionUI(solution) {
       });
     }
   }
-}
 
   AppState.currentMoveIndex = -1;
   highlightCurrentMove(-1);

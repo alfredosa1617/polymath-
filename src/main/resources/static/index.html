@@ -37,7 +37,7 @@
         Sign In
       </button>
       <button onclick="setAuthMode('signup'); switchView('auth');" data-view-target="auth" data-auth-mode="signup" class="polymath-btn-primary text-xs font-bold px-4 py-2 cursor-pointer">
-        Become a Polymath
+        Sign Up
       </button>
     </div>
   </header>
@@ -293,7 +293,7 @@
               Explore Dashboard (Demo Access) &rarr;
             </button>
             <button onclick="setAuthMode('signup'); switchView('auth');" data-view-target="auth" data-auth-mode="signup" class="polymath-btn-secondary text-sm font-semibold py-3 px-6 rounded-xl cursor-pointer">
-              Become a Polymath
+              Sign Up (Register)
             </button>
             <button onclick="setAuthMode('signin'); switchView('auth');" data-view-target="auth" data-auth-mode="signin" class="polymath-btn-secondary text-sm font-semibold py-3 px-6 rounded-xl cursor-pointer">
               Sign In to Account
@@ -460,8 +460,8 @@
           <div>
             <!-- Mode Switcher -->
             <div class="flex items-center space-x-6 border-b border-[#EAE3D9] pb-3 mb-6">
-              <button id="tab-auth-signup" type="button" class="font-bold text-xs pb-2 border-b-2 border-[#2C221E] text-[#2C221E] transition-colors uppercase tracking-wider cursor-pointer">Sign up</button>
-              <button id="tab-auth-signin" type="button" class="font-bold text-xs pb-2 border-b-2 border-transparent text-[#7C7067] hover:text-[#1C1613] transition-colors uppercase tracking-wider cursor-pointer">Sign in</button>
+              <button id="tab-auth-signup" onclick="setAuthMode('signup')" type="button" class="font-bold text-xs pb-2 border-b-2 border-[#2C221E] text-[#2C221E] transition-colors uppercase tracking-wider cursor-pointer">Sign up</button>
+              <button id="tab-auth-signin" onclick="setAuthMode('signin')" type="button" class="font-bold text-xs pb-2 border-b-2 border-transparent text-[#7C7067] hover:text-[#1C1613] transition-colors uppercase tracking-wider cursor-pointer">Sign in</button>
             </div>
 
             <!-- Header -->
@@ -4640,17 +4640,17 @@
   </div>
 
   <!-- Main App Scripts -->
-  <script src="/js/api.js?v=2.2"></script>
-  <script src="/js/dsa-data.js?v=2.2"></script>
-  <script src="/js/chess.js?v=2.2"></script>
-  <script src="/js/cube3d.js?v=2.2"></script>
-  <script src="/js/guitar.js?v=2.2"></script>
-  <script src="/js/wisdom.js?v=2.2"></script>
-  <script src="/js/crypto.js?v=2.2"></script>
-  <script src="/js/finance.js?v=2.2"></script>
-  <script src="/js/sign-language.js?v=2.2"></script>
-  <script src="/js/sample-papers.js?v=2.2"></script>
-  <script src="/js/geopolitics.js?v=2.2"></script>
-  <script src="/js/app.js?v=2.2"></script>
+  <script src="/js/api.js?v=2.3"></script>
+  <script src="/js/dsa-data.js?v=2.3"></script>
+  <script src="/js/chess.js?v=2.3"></script>
+  <script src="/js/cube3d.js?v=2.3"></script>
+  <script src="/js/guitar.js?v=2.3"></script>
+  <script src="/js/wisdom.js?v=2.3"></script>
+  <script src="/js/crypto.js?v=2.3"></script>
+  <script src="/js/finance.js?v=2.3"></script>
+  <script src="/js/sign-language.js?v=2.3"></script>
+  <script src="/js/sample-papers.js?v=2.3"></script>
+  <script src="/js/geopolitics.js?v=2.3"></script>
+  <script src="/js/app.js?v=2.3"></script>
 </body>
 </html>
